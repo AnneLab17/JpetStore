@@ -25,7 +25,7 @@ public class TestSelenium_OK {
 
 	
 	//navigation
-	driver.get("https://petstore.octoperf.com/");
+	driver.get("http://localhost:8180/jpetstore");
 	
 	driver.findElement(By.xpath("//a[.='Enter the Store']")).click();
 	
@@ -82,6 +82,168 @@ public class TestSelenium_OK {
 		System.out.println("ERREUR : le prix du panier n'a pas été multiplié par deux");
 	}
 	System.out.println("SUCCES : le prix du panier a été multiplié par deux");
+	
+	//clic sur le lien Fish 
+	driver.findElement(By.xpath("//div[@id='QuickLinks']/a[contains(@href,'Id=FISH')]")).click();
+	assertEquals(driver.findElement(By.xpath("//h2")).getText(),"Fish");
+	
+	//clic sur un produit
+	driver.findElement(By.xpath("//a[contains(@href,'Id=FI-SW-01')]")).click();
+	
+	//clic sur un item
+	driver.findElement(By.xpath("//a[contains(@href,'workingItemId=EST-2')]")).click();
+	assertEquals(driver.findElement(By.xpath("//h2")).getText(),"Shopping Cart");
+	
+	//clic sur le lien Fish 
+	driver.findElement(By.xpath("//div[@id='QuickLinks']/a[contains(@href,'Id=FISH')]")).click();
+	assertEquals(driver.findElement(By.xpath("//h2")).getText(),"Fish");
+	
+	//clic sur un produit
+	driver.findElement(By.xpath("//a[contains(@href,'Id=FI-SW-02')]")).click();
+	
+	//clic sur un item
+	driver.findElement(By.xpath("//a[contains(@href,'workingItemId=EST-3')]")).click();
+	assertEquals(driver.findElement(By.xpath("//h2")).getText(),"Shopping Cart");
+	
+	//clic sur le lien Fish 
+	driver.findElement(By.xpath("//div[@id='QuickLinks']/a[contains(@href,'Id=FISH')]")).click();
+	assertEquals(driver.findElement(By.xpath("//h2")).getText(),"Fish");
+	
+	//clic sur un produit
+	driver.findElement(By.xpath("//a[contains(@href,'Id=FI-FW-01')]")).click();
+	
+	//clic sur un item
+	driver.findElement(By.xpath("//a[contains(@href,'workingItemId=EST-4')]")).click();
+	assertEquals(driver.findElement(By.xpath("//h2")).getText(),"Shopping Cart");
+	
+	//clic sur le lien Fish 
+	driver.findElement(By.xpath("//div[@id='QuickLinks']/a[contains(@href,'Id=FISH')]")).click();
+	assertEquals(driver.findElement(By.xpath("//h2")).getText(),"Fish");
+	
+	//clic sur un produit
+	driver.findElement(By.xpath("//a[contains(@href,'Id=FI-FW-01')]")).click();
+	
+	//clic sur un item
+	driver.findElement(By.xpath("//a[contains(@href,'workingItemId=EST-5')]")).click();
+	assertEquals(driver.findElement(By.xpath("//h2")).getText(),"Shopping Cart");
+	
+	//clic sur le lien Fish 
+	driver.findElement(By.xpath("//div[@id='QuickLinks']/a[contains(@href,'Id=FISH')]")).click();
+	assertEquals(driver.findElement(By.xpath("//h2")).getText(),"Fish");
+	
+	//clic sur un produit
+	driver.findElement(By.xpath("//a[contains(@href,'Id=FI-FW-02')]")).click();
+	
+	//clic sur un item
+	driver.findElement(By.xpath("//a[contains(@href,'workingItemId=EST-20')]")).click();
+	assertEquals(driver.findElement(By.xpath("//h2")).getText(),"Shopping Cart");
+	
+	//clic sur le lien Fish 
+	driver.findElement(By.xpath("//div[@id='QuickLinks']/a[contains(@href,'Id=FISH')]")).click();
+	assertEquals(driver.findElement(By.xpath("//h2")).getText(),"Fish");
+	
+	//clic sur un produit
+	driver.findElement(By.xpath("//a[contains(@href,'Id=FI-FW-02')]")).click();
+	
+	//clic sur un item
+	driver.findElement(By.xpath("//a[contains(@href,'workingItemId=EST-21')]")).click();
+	assertEquals(driver.findElement(By.xpath("//h2")).getText(),"Shopping Cart");
+	
+	//clic sur le lien Dogs
+	driver.findElement(By.xpath("//div[@id='QuickLinks']/a[contains(@href,'Id=DOGS')]")).click();
+	assertEquals(driver.findElement(By.xpath("//h2")).getText(),"Dogs");
+	
+	//clic sur un produit
+	driver.findElement(By.xpath("//a[contains(@href,'Id=K9-BD-01')]")).click();
+	
+	//clic sur un item
+	driver.findElement(By.xpath("//a[contains(@href,'workingItemId=EST-6')]")).click();
+	assertEquals(driver.findElement(By.xpath("//h2")).getText(),"Shopping Cart");
+	
+	//clic sur le lien Dogs
+	driver.findElement(By.xpath("//div[@id='QuickLinks']/a[contains(@href,'Id=DOGS')]")).click();
+	assertEquals(driver.findElement(By.xpath("//h2")).getText(),"Dogs");
+	
+	//clic sur un produit
+	driver.findElement(By.xpath("//a[contains(@href,'Id=K9-BD-01')]")).click();
+	
+	//clic sur un item
+	driver.findElement(By.xpath("//a[contains(@href,'workingItemId=EST-7')]")).click();
+	assertEquals(driver.findElement(By.xpath("//h2")).getText(),"Shopping Cart");
+	
+	//Recherche Poodle
+	driver.findElement(By.xpath("//input[@name='keyword']")).clear();
+	driver.findElement(By.xpath("//input[@name='keyword']")).sendKeys("poodle");
+	
+	//clic sur le bouton Search
+	driver.findElement(By.xpath("//input[@name='searchProducts']")).click();
+	
+	//clic sur un produit
+	driver.findElement(By.xpath("//a[contains(@href,'Id=K9-PO-02')]")).click();
+	
+	//clic sur un item
+	driver.findElement(By.xpath("//a[contains(@href,'workingItemId=EST-8')]")).click();
+	assertEquals(driver.findElement(By.xpath("//h2")).getText(),"Shopping Cart");
+	
+	//clic sur Catalog
+	driver.findElement(By.xpath("//a[contains(@href,'Catalog')]")).click();
+	
+	//clic sur le lien Reptiles
+	driver.findElement(By.xpath("//div[@id='QuickLinks']/a[contains(@href,'Id=REPTILES')]")).click();
+	assertEquals(driver.findElement(By.xpath("//h2")).getText(),"Reptiles");
+	
+	//clic sur un produit
+	driver.findElement(By.xpath("//a[contains(@href,'Id=RP-SN-01')]")).click();
+	
+	//clic sur un item
+	driver.findElement(By.xpath("//a[contains(@href,'workingItemId=EST-11')]")).click();
+	assertEquals(driver.findElement(By.xpath("//h2")).getText(),"Shopping Cart");
+	
+	//clic sur Help
+	driver.findElement(By.xpath("//a[contains(@href,'help')]")).click();
+	
+	//Retour
+	driver.navigate().back();
+	
+	//clic sur Cart
+	driver.findElement(By.xpath("//a[contains(@href,'Cart')]")).click();
+	
+	//clic sur My Account
+	driver.findElement(By.xpath("//a[contains(@href,'editAccountForm')]")).click();
+	
+	//clic sur My Orders
+	driver.findElement(By.xpath("//a[contains(@href,'Order')]")).click();
+	
+	//clic sur le lien Cats
+	driver.findElement(By.xpath("//div[@id='QuickLinks']/a[contains(@href,'Id=CATS')]")).click();
+	assertEquals(driver.findElement(By.xpath("//h2")).getText(),"Cats");
+	
+	//clic sur un produit
+	driver.findElement(By.xpath("//a[contains(@href,'Id=FL-DSH-01')]")).click();
+	
+	//clic sur un item
+	driver.findElement(By.xpath("//a[contains(@href,'workingItemId=EST-14')]")).click();
+	assertEquals(driver.findElement(By.xpath("//h2")).getText(),"Shopping Cart");
+	
+	//clic sur le lien Birds
+	driver.findElement(By.xpath("//div[@id='QuickLinks']/a[contains(@href,'Id=BIRDS')]")).click();
+	assertEquals(driver.findElement(By.xpath("//h2")).getText(),"Birds");
+	
+	//clic sur un produit
+	driver.findElement(By.xpath("//a[contains(@href,'Id=AV-CB-01')]")).click();
+	
+	//clic sur un item
+	driver.findElement(By.xpath("//a[contains(@href,'workingItemId=EST-18')]")).click();
+	assertEquals(driver.findElement(By.xpath("//h2")).getText(),"Shopping Cart");
+	
+	//Checkout
+	driver.findElement(By.xpath("//a[contains(@href,'newOrderForm')]")).click();
+	
+	//clic sur le bouton continue
+	driver.findElement(By.xpath("//input[@name='newOrder']")).click();
+	
+	//clic sur le bouton confirm
+	driver.findElement(By.xpath("//a[contains(@href,'confirmed')]")).click();
 	
 	
 	driver.quit();

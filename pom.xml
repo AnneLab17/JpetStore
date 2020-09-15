@@ -12,6 +12,14 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		
+		    <!-- Remove after parent 32 (support for jdk 13) -->
+    <jacoco.version>0.8.5</jacoco.version>
+    
+    <sonar.host.url>http://localhost:9000</sonar.host.url>
+    <sonar.login>17be453c3ccc6a6139e8de22bf708fa43c4f7260</sonar.login>
+    <sonar.sources>src/main/java</sonar.sources>
+    <sonar.projectName>JpetStore-selenium</sonar.projectName>
 	</properties>
 
 	<dependencies>
